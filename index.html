@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Basic Trivia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+</head>
+<body>
+
+
+    <div class="container">
+        <h1>Basic Trivia Game</h1>
+        <h2>Time Remaining: <span id="timeRemaining">99</span></h2>
+    </div>
+
+    <div class="container">
+        <h4>Correct Answers: <span id="correctAnswers">0</span></h2>
+        <h4>Incorrect Answers: <span id="incorrectAnswers">0</span></h2>
+        <h4>Unanswered Answers: <span id="unAnswers"></span>5</h2>
+    </div>
+
+    <div class="container">
+        <h3>What part of the human body is repeatedly shown in <i>Blade Runner</i>?</h3>
+        <form>
+            <input type="radio" name="choice" value="rightChoice">&nbsp Eyes &nbsp
+            <input type="radio" name="choice" value="wrongChoice">&nbsp Hands &nbsp
+            <input type="radio" name="choice" value="wrongChoice">&nbsp Feet &nbsp
+            <input type="radio" name="choice" value="wrongChoice">&nbsp Mouth &nbsp
+        </form>
+        <br>
+        <span id="printResult"></span>
+    </div>
+
+    <div class="container">
+        <h3>The film, <i>Isle of Dogs</i>, was influenced by whose work?</h3>
+        <form>
+            <input type="radio" name="choice" value="wrongChoice">&nbsp Hayao Miyazaki &nbsp
+            <input type="radio" name="choice" value="wrongChoice">&nbsp Shohei Imamura &nbsp
+            <input type="radio" name="choice" value="rightChoice">&nbsp Akira Kurosawa &nbsp
+            <input type="radio" name="choice" value="wrongChoice">&nbsp Takashi Miike &nbsp
+        </form>
+        <br>
+        <span id="printResult"></span>
+    </div>
+
+    <div class="container">
+        <button onclick="submission()">Submit</button>
+        <br>
+    </div>
+
+    
+
+    
+
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+</html>
