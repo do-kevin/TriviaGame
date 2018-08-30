@@ -1,4 +1,4 @@
-//+-+-+-+-+-+-+-+-+-+-+-+-+-+- Global Variables+-+-+-+-+-+-+-+-+-+-+-+-+-+-//
+//============================ Global Variables ===========================//
 var number = 45;
 var intervalId;
 
@@ -12,7 +12,7 @@ var radioValueThree;
 var radioValueFour;
 var radioValueFive;
 
-//+-+-+-+-+-+-+-+-+-+-+-+-+-+- Functions +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-//
+//================================ Functions ================================//
 
 // `:checked` checks if the radio input has been selected
 $("input[type='radio']").click(function() {
@@ -35,20 +35,39 @@ $("input[type='radio']").click(function() {
     radioValueFive = $("input[name='choice5']:checked").val();
 });
 
-// Timer
-function runTimer() {
-    // Clears timer set. This is placed in the beginning to prevent multiple instances.
+//+-+-+-+-+-+-+-+-+-+-+-+-+-+- Timers +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-//
+function runTimer1() {
     clearInterval(intervalId);
-    // Triggers timerDown function every 1000 milliseconds. 
-    intervalId = setInterval(timerDown, 1000);
+    intervalId = setInterval(timerDown1, 1000);
 }
 
+function runTimer2() {
+    clearInterval(intervalId);
+    intervalId = setInterval(timerDown2, 1000);
+}
+
+function runTimer3() {
+    clearInterval(intervalId);
+    intervalId = setInterval(timerDown3, 1000);
+}
+
+function runTimer4() {
+    clearInterval(intervalId);
+    intervalId = setInterval(timerDown4, 1000);
+}
+
+function runTimer5() {
+    clearInterval(intervalId);
+    intervalId = setInterval(timerDown5, 1000);
+}
+
+//+-+-+-+-+-+-+-+-+-+-+-+-+-+- Time Stoppers +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-//
 function stopTimer() {
     clearInterval(intervalId);
 }
     
-
-function timerDown() {
+//+-+-+-+-+-+-+-+-+-+-+-+-+-+- Timer Downs +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-//
+function timerDown1() {
     number--;
     $("#timeRemaining").html(number);
 
@@ -57,15 +76,11 @@ function timerDown() {
 
             if (radioValueOne === "wrongChoice") {
                 incorrectAnswers++;
-                
-                console.log("User submitted: " + radioValueOne);
                 $("#incorrectAnswers").html(incorrectAnswers);
             }
         
             else if (radioValueOne === "rightChoice") {
                 correctAnswers++;
-                
-                console.log("User submitted: " + radioValueOne);
                 $("#correctAnswers").html(correctAnswers);
                 
             }
@@ -74,19 +89,25 @@ function timerDown() {
                 unansweredAnswers++;
                 $("#unansweredAnswers").html(unansweredAnswers);
             }
-            
+        setTimeout(number = 45, 5000);
+        setTimeout(runTimer2(), 5000);
+    }
+}
+
+function timerDown2() {
+    number--;
+    $("#timeRemaining").html(number);
+
+    if(number === 0) {
+        stopTimer();
 
             if (radioValueTwo === "wrongChoice") {
                 incorrectAnswers++;
-                
-                console.log("User submitted: " + radioValueTwo);
                 $("#incorrectAnswers").html(incorrectAnswers);
             }
         
             else if (radioValueTwo === "rightChoice") {
                 correctAnswers++;
-                
-                console.log("User submitted: " + radioValueTwo);
                 $("#correctAnswers").html(correctAnswers);
                 
             }
@@ -95,18 +116,25 @@ function timerDown() {
                 unansweredAnswers++;
                 $("#unansweredAnswers").html(unansweredAnswers);
             }
+            setTimeout(number = 45, 5000);
+            setTimeout(runTimer3(), 5000);
+    }
+}
+
+function timerDown3() {
+    number--;
+    $("#timeRemaining").html(number);
+
+    if(number === 0) {
+        stopTimer();
 
             if (radioValueThree === "wrongChoice") {
                 incorrectAnswers++;
-                
-                console.log("User submitted: " + radioValueThree);
                 $("#incorrectAnswers").html(incorrectAnswers);
             }
         
             else if (radioValueThree === "rightChoice") {
                 correctAnswers++;
-                
-                console.log("User submitted: " + radioValueThree);
                 $("#correctAnswers").html(correctAnswers);
                 
             }
@@ -115,18 +143,25 @@ function timerDown() {
                 unansweredAnswers++;
                 $("#unansweredAnswers").html(unansweredAnswers);
             }
+            setTimeout(number = 45, 5000);
+            setTimeout(runTimer4(), 5000);
+    }
+}
+
+function timerDown4() {
+    number--;
+    $("#timeRemaining").html(number);
+
+    if(number === 0) {
+        stopTimer();
 
             if (radioValueFour === "wrongChoice") {
                 incorrectAnswers++;
-                
-                console.log("User submitted: " + radioValueFour);
                 $("#incorrectAnswers").html(incorrectAnswers);
             }
         
             else if (radioValueFour === "rightChoice") {
                 correctAnswers++;
-                
-                console.log("User submitted: " + radioValueFour);
                 $("#correctAnswers").html(correctAnswers);
                 
             }
@@ -135,18 +170,25 @@ function timerDown() {
                 unansweredAnswers++;
                 $("#unansweredAnswers").html(unansweredAnswers);
             }
+            setTimeout(number = 45, 5000);
+            setTimeout(runTimer5(), 5000);
+    }
+}
+
+function timerDown5() {
+    number--;
+    $("#timeRemaining").html(number);
+
+    if(number === 0) {
+        stopTimer();
 
             if (radioValueFive === "wrongChoice") {
                 incorrectAnswers++;
-                
-                console.log("User submitted: " + radioValueFive);
                 $("#incorrectAnswers").html(incorrectAnswers);
             }
         
             else if (radioValueFive === "rightChoice") {
                 correctAnswers++;
-                
-                console.log("User submitted: " + radioValueFive);
                 $("#correctAnswers").html(correctAnswers);
                 
             }
@@ -155,10 +197,8 @@ function timerDown() {
                 unansweredAnswers++;
                 $("#unansweredAnswers").html(unansweredAnswers);
             }
-            
-
     }
 }
 
 //+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+- Main Process +-+-+-+-+-+-+-+-+-+-+-+-+-+-//
-runTimer();
+runTimer1();
