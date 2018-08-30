@@ -36,10 +36,10 @@
 
     <div class="container">
         <h1>Advanced Trivia Game</h1>
-        <h2>Time Remaining: <span id="timeRemaining">45</span></h2>
+        <h2>Time Remaining: <span id="timeRemaining">20</span></h2>
     </div>
 
-    <div class="container">
+    <div class="container" id="results">
         <h4>Correct Answers: <span id="correctAnswers">0</span></h2>
             <h4>Incorrect Answers: <span id="incorrectAnswers">0</span></h2>
                 <h4>Unanswered Answers: <span id="unansweredAnswers">0</span></h2>
@@ -47,8 +47,8 @@
 
     <div class="container">
         <!---+--+--+--+--+--+--+--+--Question One+--+--+--+--+--+--+--+--+--+--+--+--+--->
-        <h3>What part of the human body is repeatedly shown in <i>Blade Runner</i>?</h3>
-        <form>
+        <h3 class="questionOne">What part of the human body is repeatedly shown in <i>Blade Runner</i>?</h3>
+        <form class="questionOne">
             <input type="radio" name="choice1" value="rightChoice">&nbsp Eyes &nbsp
             <input type="radio" name="choice1" value="wrongChoice">&nbsp Hands &nbsp
             <input type="radio" name="choice1" value="wrongChoice">&nbsp Feet &nbsp
@@ -56,8 +56,8 @@
         </form>
         <br>
         <!---+--+--+--+--+--+--+--+--Question Two+--+--+--+--+--+--+--+--+--+--+--+--+--+--->
-        <h3>The film, <i>Isle of Dogs</i>, was influenced by whose work?</h3>
-        <form>
+        <h3 class="questionTwo">The film, <i>Isle of Dogs</i>, was influenced by whose work?</h3>
+        <form class="questionTwo">
             <input type="radio" name="choice2" value="wrongChoice">&nbsp Hayao Miyazaki &nbsp
             <input type="radio" name="choice2" value="wrongChoice">&nbsp Shohei Imamura &nbsp
             <input type="radio" name="choice2" value="rightChoice">&nbsp Akira Kurosawa &nbsp
@@ -65,8 +65,8 @@
         </form>
         <br>
         <!---+--+--+--+--+--+--+--+--+Question Three--+--+--+--+--+--+--+--+--+--+--+--+--+--->
-        <h3>What does the frog represent in <i>Pan's Labyrinth</i>?</h3>
-        <form>
+        <h3 class="questionThree">What does the frog represent in <i>Pan's Labyrinth</i>?</h3>
+        <form class="questionThree">
             <input type="radio" name="choice3" value="wrongChoice">&nbsp Catholicism &nbsp
             <input type="radio" name="choice3" value="rightChoice">&nbsp Greed &nbsp
             <input type="radio" name="choice3" value="wrongtChoice">&nbsp Baby Brother &nbsp
@@ -74,8 +74,8 @@
         </form>
         <br>
         <!---+--+--+--+--+--+--+--+--+-Question Four--+--+--+--+--+--+--+--+--+--+--+--+--->
-        <h3>What is Christopher Nolan known for when it came to filmmaking?</h3>
-        <form>
+        <h3 class="questionFour">What is Christopher Nolan known for when it came to filmmaking?</h3>
+        <form class="questionFour">
             <input type="radio" name="choice4" value="wrongChoice">&nbsp Making Star Wars &nbsp
             <input type="radio" name="choice4" value="wrongChoice">&nbsp Producing Full CGI films &nbsp
             <input type="radio" name="choice4" value="wrongChoice">&nbsp Being the Stuntsman &nbsp
@@ -83,8 +83,8 @@
         </form>
         <br>
         <!---+--+--+--+--+--+--+--+--+--Question Five-+--+--+--+--+--+--+--+--+--+--+--+--->
-        <h3>What is <i>Inception</i> and <i>Westworld</i> the art of, respectively?</h3>
-        <form>
+        <h3 class="questionFive">What is <i>Inception</i> and <i>Westworld</i> the art of, respectively?</h3>
+        <form class="questionFive">
             <input type="radio" name="choice5" value="wrongChoice">&nbsp Editing & Timing &nbsp
             <input type="radio" name="choice5" value="wrongChoice">&nbsp Showing Empathy & Humanity &nbsp
             <input type="radio" name="choice5" value="rightChoice">&nbsp Filmmaking & Storytelling &nbsp

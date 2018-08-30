@@ -1,5 +1,5 @@
 //============================ Global Variables ===========================//
-var number = 45;
+var number = 20;
 var intervalId;
 
 var correctAnswers = 0;
@@ -36,29 +36,67 @@ $("input[type='radio']").click(function() {
 });
 
 //+-+-+-+-+-+-+-+-+-+-+-+-+-+- Timers +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-//
+// function runTimer (timerNum) {
+//     var foo = 
+// }
+
 function runTimer1() {
+    correctAnswers = 0;
+    incorrectAnswers = 0;
+    unansweredAnswers = 0
     clearInterval(intervalId);
     intervalId = setInterval(timerDown1, 1000);
+    $(".questionTwo").hide();
+    $(".questionThree").hide();
+    $(".questionFour").hide();
+    $(".questionFive").hide();
+    $("#results").hide();
 }
+
+
 
 function runTimer2() {
     clearInterval(intervalId);
     intervalId = setInterval(timerDown2, 1000);
+    $(".questionOne").fadeOut();
+    $(".questionThree").hide();
+    $(".questionFour").hide();
+    $(".questionFive").hide();
+
+    $(".questionTwo").fadeIn();
 }
 
 function runTimer3() {
     clearInterval(intervalId);
     intervalId = setInterval(timerDown3, 1000);
+    $(".questionOne").hide();
+    $(".questionTwo").fadeOut();
+    $(".questionFour").hide();
+    $(".questionFive").hide();
+
+    $(".questionThree").fadeIn();
 }
 
 function runTimer4() {
     clearInterval(intervalId);
     intervalId = setInterval(timerDown4, 1000);
+    $(".questionOne").hide();
+    $(".questionThree").fadeOut();
+    $(".questionTwo").hide();
+    $(".questionFive").hide();
+
+    $(".questionFour").fadeIn();
 }
 
 function runTimer5() {
     clearInterval(intervalId);
     intervalId = setInterval(timerDown5, 1000);
+    $(".questionOne").hide();
+    $(".questionThree").hide();
+    $(".questionFour").fadeOut();
+    $(".questionTwo").hide();
+
+    $(".questionFive").fadeIn();
 }
 
 //+-+-+-+-+-+-+-+-+-+-+-+-+-+- Time Stoppers +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-//
@@ -89,7 +127,7 @@ function timerDown1() {
                 unansweredAnswers++;
                 $("#unansweredAnswers").html(unansweredAnswers);
             }
-        setTimeout(number = 45, 5000);
+        setTimeout(number = 20, 5000);
         setTimeout(runTimer2(), 5000);
     }
 }
@@ -116,7 +154,7 @@ function timerDown2() {
                 unansweredAnswers++;
                 $("#unansweredAnswers").html(unansweredAnswers);
             }
-            setTimeout(number = 45, 5000);
+            setTimeout(number = 20, 5000);
             setTimeout(runTimer3(), 5000);
     }
 }
@@ -143,7 +181,7 @@ function timerDown3() {
                 unansweredAnswers++;
                 $("#unansweredAnswers").html(unansweredAnswers);
             }
-            setTimeout(number = 45, 5000);
+            setTimeout(number = 20, 5000);
             setTimeout(runTimer4(), 5000);
     }
 }
@@ -170,7 +208,7 @@ function timerDown4() {
                 unansweredAnswers++;
                 $("#unansweredAnswers").html(unansweredAnswers);
             }
-            setTimeout(number = 45, 5000);
+            setTimeout(number = 20, 5000);
             setTimeout(runTimer5(), 5000);
     }
 }
@@ -197,8 +235,9 @@ function timerDown5() {
                 unansweredAnswers++;
                 $("#unansweredAnswers").html(unansweredAnswers);
             }
+            $("#results").fadeIn();
     }
 }
 
-//+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+- Main Process +-+-+-+-+-+-+-+-+-+-+-+-+-+-//
+//=============================== Main Process ============================//
 runTimer1();
