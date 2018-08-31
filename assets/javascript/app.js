@@ -41,6 +41,7 @@ function runTimer() {
     clearInterval(intervalId);
     // Triggers timerDown function every 1000 milliseconds. 
     intervalId = setInterval(timerDown, 1000);
+    $("#results").hide();
 }
 
 function stopTimer() {
@@ -57,15 +58,11 @@ function timerDown() {
 
             if (radioValueOne === "wrongChoice") {
                 incorrectAnswers++;
-                
-                console.log("User submitted: " + radioValueOne);
                 $("#incorrectAnswers").html(incorrectAnswers);
             }
         
             else if (radioValueOne === "rightChoice") {
                 correctAnswers++;
-                
-                console.log("User submitted: " + radioValueOne);
                 $("#correctAnswers").html(correctAnswers);
                 
             }
@@ -78,15 +75,11 @@ function timerDown() {
 
             if (radioValueTwo === "wrongChoice") {
                 incorrectAnswers++;
-                
-                console.log("User submitted: " + radioValueTwo);
                 $("#incorrectAnswers").html(incorrectAnswers);
             }
         
             else if (radioValueTwo === "rightChoice") {
                 correctAnswers++;
-                
-                console.log("User submitted: " + radioValueTwo);
                 $("#correctAnswers").html(correctAnswers);
                 
             }
@@ -98,15 +91,11 @@ function timerDown() {
 
             if (radioValueThree === "wrongChoice") {
                 incorrectAnswers++;
-                
-                console.log("User submitted: " + radioValueThree);
                 $("#incorrectAnswers").html(incorrectAnswers);
             }
         
             else if (radioValueThree === "rightChoice") {
                 correctAnswers++;
-                
-                console.log("User submitted: " + radioValueThree);
                 $("#correctAnswers").html(correctAnswers);
                 
             }
@@ -118,15 +107,11 @@ function timerDown() {
 
             if (radioValueFour === "wrongChoice") {
                 incorrectAnswers++;
-                
-                console.log("User submitted: " + radioValueFour);
                 $("#incorrectAnswers").html(incorrectAnswers);
             }
         
             else if (radioValueFour === "rightChoice") {
                 correctAnswers++;
-                
-                console.log("User submitted: " + radioValueFour);
                 $("#correctAnswers").html(correctAnswers);
                 
             }
@@ -138,15 +123,11 @@ function timerDown() {
 
             if (radioValueFive === "wrongChoice") {
                 incorrectAnswers++;
-                
-                console.log("User submitted: " + radioValueFive);
                 $("#incorrectAnswers").html(incorrectAnswers);
             }
         
             else if (radioValueFive === "rightChoice") {
                 correctAnswers++;
-                
-                console.log("User submitted: " + radioValueFive);
                 $("#correctAnswers").html(correctAnswers);
                 
             }
@@ -156,7 +137,7 @@ function timerDown() {
                 $("#unansweredAnswers").html(unansweredAnswers);
             }
             
-
+            setTimeout($("#results").fadeIn(), 46000);
     }
 }
 
